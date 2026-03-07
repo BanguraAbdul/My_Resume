@@ -43,7 +43,7 @@ export class AppComponent {
       { category: 'Programming Languages', items: ['Python', 'Java', 'C++', 'C'] },
       { category: 'Web Technologies', items: ['Angular', 'HTML', 'CSS', 'Bootstrap'] },
       { category: 'Backend & Database', items: ['Spring Boot', 'SQL', 'PostgreSQL', 'MS Access'] },
-      { category: 'Tools & Platforms', items: ['Git', 'GitHub', 'Cursor AI', 'Microsoft Office Suite', 'Google Workspace'] }
+      { category: 'Tools & Platforms', items: ['Git & GitHub', 'Cursor AI', 'Microsoft Office Suite', 'Google Workspace'] }
     ],
     
     experience: [
@@ -83,10 +83,10 @@ export class AppComponent {
       {
         degree: 'Ubuntu Africa Foundation 5th Cohort Trainee',
         institution: 'Ubuntu Africa Foundation',
-        period: 'June 2025 - Present (Expected Completion: March 2026)',
+        period: 'June 2025 -  March 2026',
         details: [
           'Engaged in intensive training in Git & GitHub, PostgreSQL, Java, Angular, Spring Boot and AI to develop full stack applications for community-driven solutions.',
-          'Collaborating on real-world projects to address healthcare and technology challenges.'
+          'Collaborated on real-world projects on enterprise leve to address technology challenges.'
         ]
       },
       {
@@ -113,11 +113,11 @@ export class AppComponent {
     projects: [
       {
         name: 'ThePlugICT SL Website',
-        description: 'Built a website using Angular and Bootstrap',
+        description: 'Built a  business website using Angular and Bootstrap',
         technologies: ['Angular', 'Bootstrap']
       },
       {
-        name: 'Enterprise Category Management System',
+        name: 'Vitalydae',
         description: 'Contributed to an enterprise web application using Angular and Spring Boot. Implemented dynamic dropdown filtering and backend user filtering functionality. Integrated frontend components with REST APIs using layered architecture principles.',
         technologies: ['Angular', 'Spring Boot']
       }
@@ -132,7 +132,7 @@ export class AppComponent {
       },
       {
         name: 'Mr. Lukeman Kamara',
-        title: 'Two Supervisor, Ubuntu Africa Tech Sierra Leone',
+        title: 'Team Two Supervisor, Ubuntu Africa Tech Sierra Leone',
         phone: '+232 78 883816',
         email: 'l.kamara@ubuntuafrika.com'
       }
