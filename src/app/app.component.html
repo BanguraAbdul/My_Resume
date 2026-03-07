@@ -1,0 +1,159 @@
+<!-- Resume Container: Main wrapper for the entire resume -->
+<div class="resume-container">
+  <!-- Download Button - Top Right (hidden in print) -->
+  <button class="download-btn download-btn-top no-print" (click)="downloadResume()">
+    <i class="fas fa-download"></i> Download PDF
+  </button>
+
+  <!-- Resume Content: Two-column grid layout -->
+  <div class="resume-content">
+    
+    <!-- Left Sidebar: Contact info, skills, and projects -->
+    <aside class="sidebar">
+      <!-- Profile Section: Photo and name -->
+      <div class="profile-section">
+        <div class="profile-photo">
+          <img [src]="profile.photo" [alt]="profile.name">
+        </div>
+        <h1 class="name">{{ profile.name }}</h1>
+      </div>
+
+      <!-- Contact Information -->
+      <div class="contact-section">
+        <div class="contact-item">
+          <i class="icon fas fa-map-marker-alt"></i>
+          <span>{{ profile.contact.location }}</span>
+        </div>
+        <div class="contact-item">
+          <i class="icon fas fa-phone"></i>
+          <span>{{ profile.contact.phone }}</span>
+        </div>
+        <div class="contact-item">
+          <i class="icon fas fa-phone"></i>
+          <span>{{ profile.contact.phone2 }}</span>
+        </div>
+        <div class="contact-item">
+          <i class="icon fas fa-language"></i>
+          <span>{{ profile.contact.languages }}</span>
+        </div>
+        <div class="contact-item">
+          <i class="icon fas fa-envelope"></i>
+          <span class="email-link">{{ profile.contact.email }}</span>
+        </div>
+        <div class="contact-item">
+          <i class="icon fab fa-github"></i>
+          <span class="github-link">{{ profile.contact.github }}</span>
+        </div>
+      </div>
+
+      <!-- Technical Skills (hidden on mobile, shown in sidebar on desktop) -->
+      <div class="skills-section">
+        <h2 class="section-title">Technical Skills</h2>
+        <div *ngFor="let skillGroup of profile.skills" class="skill-group">
+          <ul class="skill-list">
+            <li *ngFor="let skill of skillGroup.items">{{ skill }}</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Projects Section (page break before on print for page 2) -->
+      <div class="projects-section">
+        <h2 class="section-title">Projects</h2>
+        <div *ngFor="let project of profile.projects" class="project-item">
+          <h3 class="project-name">{{ project.name }}</h3>
+          <p class="project-description">{{ project.description }}</p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area: Professional profile, experience, education, etc. -->
+    <main class="main-content">
+      <!-- Professional Summary -->
+      <section class="summary-section">
+        <h2 class="section-heading">Professional Profile</h2>
+        <p class="summary-text">{{ profile.summary }}</p>
+      </section>
+
+      <!-- Work Experience -->
+      <section class="experience-section">
+        <h2 class="section-heading">Professional Experience</h2>
+        <div *ngFor="let job of profile.experience" class="experience-item">
+          <div class="experience-header">
+            <h3 class="job-title">{{ job.title }} - {{ job.company }}</h3>
+            <span class="period">{{ job.period }}</span>
+          </div>
+          <ul class="responsibilities">
+            <li *ngFor="let resp of job.responsibilities">{{ resp }}</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Education History -->
+      <section class="education-section">
+        <h2 class="section-heading">Education</h2>
+        <div *ngFor="let edu of profile.education" class="education-item">
+          <div class="education-header">
+            <h3 class="degree">{{ edu.degree }}</h3>
+            <span class="period">{{ edu.period }}</span>
+          </div>
+          <p class="institution">{{ edu.institution }}</p>
+          <ul class="education-details" *ngIf="edu.details">
+            <li *ngFor="let detail of edu.details">{{ detail }}</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Mobile Skills Section (shown only on mobile devices) -->
+      <section class="mobile-skills-section">
+        <h2 class="section-heading">Technical Skills</h2>
+        <div class="mobile-skills-grid">
+          <div *ngFor="let skillGroup of profile.skills" class="skill-group">
+            <ul class="skill-list">
+              <li *ngFor="let skill of skillGroup.items">{{ skill }}</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mobile Projects Section (shown only on mobile devices) -->
+      <section class="mobile-projects-section">
+        <h2 class="section-heading">Projects</h2>
+        <div *ngFor="let project of profile.projects" class="project-item-mobile">
+          <h3 class="project-name-mobile">{{ project.name }}</h3>
+          <p class="project-description-mobile">{{ project.description }}</p>
+        </div>
+      </section>
+
+      <!-- Certifications -->
+      <section class="certifications-section">
+        <h2 class="section-heading">Certificates</h2>
+        <ul class="cert-list">
+          <li *ngFor="let cert of profile.certifications">{{ cert }}</li>
+        </ul>
+      </section>
+
+      <!-- Achievements and Leadership -->
+      <section class="achievements-section">
+        <h2 class="section-heading">Achievements and Leadership</h2>
+        <ul class="achievements-list">
+          <li *ngFor="let achievement of profile.achievements">{{ achievement }}</li>
+        </ul>
+      </section>
+
+      <!-- Professional References -->
+      <section class="references-section">
+        <h2 class="section-heading">References</h2>
+        <div *ngFor="let ref of profile.references" class="reference-item">
+          <p class="ref-name">{{ ref.name }}</p>
+          <p class="ref-title">{{ ref.title }}</p>
+          <p class="ref-contact">{{ ref.phone }} | {{ ref.email }}</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Download Button - Bottom Right (hidden in print) -->
+  <button class="download-btn download-btn-bottom no-print" (click)="downloadResume()">
+    <i class="fas fa-download"></i> Download PDF
+  </button>
+</div>
