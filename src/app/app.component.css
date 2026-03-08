@@ -730,6 +730,11 @@
     margin: 15mm 5mm 25mm 8mm;
   }
 
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
   .download-btn,
   .no-print {
     display: none !important;
@@ -741,15 +746,18 @@
     border-radius: 0 !important;
     padding: 0 !important;
     max-width: 100% !important;
+    width: 210mm !important;
   }
 
   .resume-content {
     min-height: auto;
     grid-template-columns: 210px 1fr;
+    width: 100% !important;
   }
 
   body {
     background: white;
+    width: 210mm !important;
   }
 
   .sidebar {
@@ -757,6 +765,7 @@
     break-inside: avoid;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
+    width: 210px !important;
   }
 
   .profile-photo {
