@@ -45,12 +45,15 @@ Navigate to `http://localhost:4200/`
 npm run build
 ```
 
+The build output will be in `dist/my-resume/`
+
 ### Deploy to GitHub Pages
 
 ```bash
-npm run build
-# Push the dist/my-resume folder to gh-pages branch
+npm run deploy
 ```
+
+This command will build and automatically deploy to GitHub Pages. Your site will be live at `https://banguraabdul.github.io/My_Resume/` in 1-2 minutes.
 
 ## Project Structure
 
