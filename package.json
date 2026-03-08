@@ -5,8 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --configuration production --base-href /My_Resume/",
-    "build:local": "ng build --configuration production",
-    "deploy": "ng build --configuration production --base-href /My_Resume/ && npx angular-cli-ghpages --dir=dist/my-resume"
+    "build:local": "ng build --configuration production"
   },
   "private": true,
   "dependencies": {
