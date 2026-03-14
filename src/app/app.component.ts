@@ -125,7 +125,7 @@ export class AppComponent {
     
     references: [
       {
-        name: 'Mr. I. Kalokoh',
+        name: 'Mr. Ibrahim Kalokoh',
         title: 'Computer Science Department, University of Makeni',
         phone: '+232 78 228338',
         email: 'ikalokoh@unimak.edu.sl'
