@@ -101,7 +101,8 @@ export class AppComponent {
     
     certifications: [
       'Frontend Web Development (2022): WordPress, JavaScript, HTML, and CSS.',
-      'Microsoft Office Packages (2017): Advanced skills in MS Word, PowerPoint, Excel, Publisher, and Access.'
+      'Microsoft Office Packages (2017/2018): Advanced skills in MS Word, PowerPoint, Excel, Publisher, Access and Outlook.',
+      'Software Applications Programs (2017): Fundamental skills in Computing, MS Word, PowerPoint, Excel, and Internet.'
     ],
     
     achievements: [
