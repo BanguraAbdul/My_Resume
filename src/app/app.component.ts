@@ -33,7 +33,7 @@ export class AppComponent {
       phone2: '+232 75556630',
       email: 'abdulbangura023@gmail.com',
       location: '4 Maghuraka Road, Masingbi Town',
-      languages: 'Temne, Krio and English Language',
+      languages: 'English Language, Krio and Temne',
       github: 'https://github.com/BanguraAbdul'
     },
     
